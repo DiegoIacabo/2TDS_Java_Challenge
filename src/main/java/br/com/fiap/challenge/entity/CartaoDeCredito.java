@@ -13,7 +13,16 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Builder
 @Entity
-@Table(name = "TB_CARTAO")
+@Table(name = "TB_CARTAO", uniqueConstraints = {
+        @UniqueConstraint(
+                name = "UK_NUM_CARTAO",
+                columnNames = "NUM_CARTAO"
+        ),
+        @UniqueConstraint(
+                name = "UK_CONTA_CLIENTE_BANDEIRA",
+                columnNames = {"CONTA", "CLIENTE", "BANDEIRA"}
+        )
+})
 public class CartaoDeCredito {
 
     @Id
@@ -22,26 +31,46 @@ public class CartaoDeCredito {
     @Column(name = "ID_CARTAO")
     private Long id;
 
-    @Column(name = "NUM_CARTAO")
+    @Column(name = "NUM_CARTAO", nullable = false)
     private String numero;
 
-    private LocalDate dataVencimento;
+    @Column(name = "VALIDADE", nullable = false)
+    private LocalDate validade;
 
+    @Column(name = "CODIGO_DE_SEGURANCA", nullable = false)
     private String codSeguranca;
 
+    @Column(name = "SENHA", nullable = false)
     private String senha;
 
+    @Column(name = "BANDEIRA", nullable = false)
+    private String bandeira;
+
+    @Column(name = "LIMITE", nullable = false)
     private Double limite;
 
+    @Column(name = "FATURA")
     private Double fatura;
 
-    @OneToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @JoinColumn(
+            name = "CLIENTE",
+            referencedColumnName = "ID_CLIENTE",
+            foreignKey = @ForeignKey(
+                    name = "FK_CARTAO_CLIENTE"
+            ),
+            nullable = false
+    )
+    private Cliente cliente;
+
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(
             name = "CONTA",
             referencedColumnName = "ID_CONTA",
             foreignKey = @ForeignKey(
                     name = "FK_CARTAO_CONTA"
-            )
+            ),
+            nullable = false
     )
     private Conta conta;
 }

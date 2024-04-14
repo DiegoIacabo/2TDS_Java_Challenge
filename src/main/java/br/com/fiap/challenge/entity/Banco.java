@@ -11,7 +11,16 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 @Entity
-@Table(name = "TB_BANCO")
+@Table(name = "TB_BANCO", uniqueConstraints = {
+        @UniqueConstraint(
+                name = "UK_NM_BANCO",
+                columnNames = "NM_BANCO"
+        ),
+        @UniqueConstraint(
+                name = "UK_CNPJ_BANCO",
+                columnNames = "CNPJ"
+        )
+})
 public class Banco {
 
     @Id
@@ -20,8 +29,9 @@ public class Banco {
     @Column(name = "ID_BANCO")
     private Long id;
 
-    @Column(name = "NM_BANCO")
+    @Column(name = "NM_BANCO", nullable = false)
     private String nome;
 
+    @Column(name = "CNPJ", nullable = false)
     private String cnpj;
 }
