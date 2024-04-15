@@ -3,12 +3,16 @@ package br.com.fiap.challenge.service;
 import br.com.fiap.challenge.dto.request.AbstractRequest;
 import br.com.fiap.challenge.dto.request.ContaRequest;
 import br.com.fiap.challenge.dto.response.ContaResponse;
+import br.com.fiap.challenge.entity.Cliente;
 import br.com.fiap.challenge.entity.Conta;
 import br.com.fiap.challenge.repository.ContaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Service
 public class ContaService implements ServiceDTO<Conta, ContaRequest, ContaResponse, AbstractRequest> {
@@ -27,9 +31,18 @@ public class ContaService implements ServiceDTO<Conta, ContaRequest, ContaRespon
 
         var agencia = agenciaService.findByAbstractRequest(contaRequest.agencia());
 
+        var clientes = clienteService.findByAbstractRequest(contaRequest.clientes());
+
+        Set<Cliente> collection = new LinkedHashSet<>();
+        collection.add(clientes);
+
+        //clienteService.toResponse(collection);
+
         return Conta.builder()
                 .numero(contaRequest.numero())
+                .saldo(contaRequest.saldo())
                 .agencia(agencia)
+                .clientes(collection)
                 .build();
 
     }

@@ -32,7 +32,7 @@ public class Conta {
     @Column(name = "SALDO", nullable = false)
     private Double saldo;
 
-    @Column(name = "DATA_ABERTURA", nullable = false)
+    @Column(name = "DATA_ABERTURA")
     private LocalDateTime dataAbertura;
 
     @Column(name = "DATA_ENCERRAMENTO")
