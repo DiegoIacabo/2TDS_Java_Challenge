@@ -8,9 +8,9 @@ public record ContaRequest(
         String numero,
 
         @NotNull(message = "A agência da conta deve ser informada.")
-        AbstractRequest agencia,
+        AbstractRequest agencia
 
-        @NotNull(message = "O(s) cliente(s) da conta deve(m) ser informado(s).")
-        AbstractRequest clientes
+        //@NotNull(message = "O(s) cliente(s) da conta deve(m) ser informado(s).")
+        //AbstractRequest clientes
 ) {
 }
