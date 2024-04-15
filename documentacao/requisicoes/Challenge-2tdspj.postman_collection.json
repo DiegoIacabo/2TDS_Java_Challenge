@@ -1,0 +1,534 @@
+{
+	"info": {
+		"_postman_id": "f96d90bf-70b7-4aee-860e-69e8d44cba73",
+		"name": "Challenge-2tdspj",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33568382"
+	},
+	"item": [
+		{
+			"name": "Banco",
+			"item": [
+				{
+					"name": "POST-BANCO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Itaú\",\r\n    \"cnpj\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/banco",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"banco"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST-BANCO2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Bradesco\",\r\n    \"cnpj\": \"654321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/banco",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"banco"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-BANCO",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/banco",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"banco"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-BANCO-BY-ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/banco/1",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"banco",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "POST-CLIENTE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Diego\",\r\n    \"cpf\": \"49571319880\",\r\n    \"renda\": 2000,\r\n    \"nascimento\": \"2002-05-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/cliente",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST-CLIENTE2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"João\",\r\n    \"cpf\": \"45675534570\",\r\n    \"renda\": 1000,\r\n    \"nascimento\": \"2000-09-17\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/cliente",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-CLIENTE",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/cliente",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-CLIENTE-BY-ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/cliente/1",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"cliente",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Agência",
+			"item": [
+				{
+					"name": "POST-AGENCIA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\": \"001\",\r\n    \"banco\": {\r\n        \"id\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/agencia",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"agencia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST-AGENCIA2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\": \"001\",\r\n    \"banco\": {\r\n        \"id\": 2\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/agencia",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"agencia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-AGENCIA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/agencia",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"agencia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-AGENCIA-BY-ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/agencia/2",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"agencia",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Conta",
+			"item": [
+				{
+					"name": "POST-CONTA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\": \"777\",\r\n    \"saldo\": 2000,\r\n    \"agencia\": {\r\n        \"id\": 1\r\n    },\r\n    \"clientes\": {\r\n        \"id\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/conta",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"conta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST-CONTA2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\": \"888\",\r\n    \"saldo\": 7000,\r\n    \"agencia\": {\r\n        \"id\": 2\r\n    },\r\n    \"clientes\": {\r\n        \"id\": 2\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/conta",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"conta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-CONTA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/conta",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"conta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-CONTA-BY-ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/conta/2",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"conta",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST-CONTA-CLIENTES",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/conta/1/clientes",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"conta",
+								"1",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cartão de Crédito",
+			"item": [
+				{
+					"name": "POST-CARTAO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\": \"01010101\",\r\n    \"codSeguranca\": \"666\",\r\n    \"senha\": \"senha123\",\r\n    \"bandeira\": \"MasterCard\",\r\n    \"validade\": \"2030-08-30\",\r\n    \"limite\": 5000,\r\n    \"conta\": {\r\n        \"id\":1\r\n    },\r\n    \"cliente\": {\r\n        \"id\":1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/cartaoDeCredito",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"cartaoDeCredito"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST-CARTAO2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\": \"1111111\",\r\n    \"codSeguranca\": \"010\",\r\n    \"senha\": \"senha321\",\r\n    \"bandeira\": \"Visa\",\r\n    \"validade\": \"2035-01-30\",\r\n    \"limite\": 10000,\r\n    \"conta\": {\r\n        \"id\":1\r\n    },\r\n    \"cliente\": {\r\n        \"id\":2\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/cartaoDeCredito",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"cartaoDeCredito"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-CARTAO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/cartaoDeCredito",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"cartaoDeCredito"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-CARTAO-BY-ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/cartaoDeCredito/2",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"cartaoDeCredito",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
