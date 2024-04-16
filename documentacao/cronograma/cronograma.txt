@@ -1,0 +1,22 @@
+- Cronograma Sprint1
+
+19/03 -> Abertura do Challenge
+
+01/04 -> Sugestões de todos os integrantes para o tema a ser abordado
+
+09/04 -> Debate e definição final sobre o escopo do projeto
+
+10/04 -> Separação das entregas entre os integrantes:
+	 Alejandro: Responsável pelo vídeo pitch;
+	 Cristian: Responsável pela criação dos protótipos de telas mobile
+	 Diego: Responsável pelo desenvolvimento do código Java e modelagem do Banco de Dados
+	 João: Responsável por desenvolver a declaração de visão e escopo do projeto em formato pitch
+	 Luiz: Responsável pelo escopo do projeto na ótica de DevOps e virtualização
+	 
+
+11/04 -> Início do desenvolvimento das entregas
+
+15/04 -> Cada integrante finaliza suas respectivas atribuições para envio das entregas da Sprint 1
+
+
+

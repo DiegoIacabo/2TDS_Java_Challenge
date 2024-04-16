@@ -29,6 +29,7 @@
 ![modelo_relacional_challenge.png](documentacao%2Fimagens%2Fmodelo_relacional_challenge.png)
 
 ## Vídeo Pitch
+- Link: https://youtu.be/pt8mEREtx3k
 
 ## Listagem de Endpoints
 - BancoResource:
