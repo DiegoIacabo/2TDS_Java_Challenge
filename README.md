@@ -8,9 +8,9 @@
 - Luiz Felipe Azevedo de Oliveira RM550348 (Responsável pelo escopo do projeto na ótica de DevOps e virtualização)
 
 ## Como Rodar a Aplicação
-    1. Clonar o repositório: `git clone https://github.com/DiegoIacabo/challenge-2tdspj.git`;
+    1. Clonar o repositório: `git clone https://github.com/DiegoIacabo/2TDS_Java_Challenge.git`;
     
-    2. Navegar até o diretório do projeto: `cd challenge-2tdspj`;
+    2. Navegar até o diretório do projeto: `cd 2TDS_Java_Challenge`;
 
     3. Verificar se todas as dependências estão instaladas no arquivo pom.xml;
 
@@ -53,3 +53,6 @@
   - "localhost/cartaoDeCredito" - GET by example
   - "localhost/cartaoDeCredito" - POST
   - "localhost/cartaoDeCredito/{id}" - GET
+
+## Repositório no GitHub
+- Link: https://github.com/DiegoIacabo/2TDS_Java_Challenge

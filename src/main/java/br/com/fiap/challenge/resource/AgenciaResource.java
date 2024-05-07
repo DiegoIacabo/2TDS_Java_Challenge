@@ -28,7 +28,7 @@ public class AgenciaResource implements ResourceDTO<Agencia, AgenciaRequest, Age
     public ResponseEntity<Collection<AgenciaResponse>> findAll(
             @RequestParam(name = "numero", required = false) String numero,
             @RequestParam(name = "banco.nome", required = false) String bancoNome,
-            @RequestParam(name = "cnpj", required = false) String bancoCnpj
+            @RequestParam(name = "banco.cnpj", required = false) String bancoCnpj
     ){
         var banco = Banco.builder()
                 .nome(bancoNome)

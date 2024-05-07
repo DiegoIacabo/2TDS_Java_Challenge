@@ -107,6 +107,29 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "GET-BANCO-BY-EXAMPLE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/banco?nome=bradesco",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"banco"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "bradesco"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -223,6 +246,29 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "GET-CLIENTE-BY-EXAMPLE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/cliente?cpf=45675534570",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"cliente"
+							],
+							"query": [
+								{
+									"key": "cpf",
+									"value": "45675534570"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -311,6 +357,29 @@
 							"path": [
 								"agencia",
 								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-AGENCIA-BY-EXAMPLE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/agencia?numero=001",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"agencia"
+							],
+							"query": [
+								{
+									"key": "numero",
+									"value": "001"
+								}
 							]
 						}
 					},
@@ -435,6 +504,29 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "GET-CONTA-BY-EXAMPLE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/conta?numero=777",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"conta"
+							],
+							"query": [
+								{
+									"key": "numero",
+									"value": "777"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -448,7 +540,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"numero\": \"01010101\",\r\n    \"codSeguranca\": \"666\",\r\n    \"senha\": \"senha123\",\r\n    \"bandeira\": \"MasterCard\",\r\n    \"validade\": \"2030-08-30\",\r\n    \"limite\": 5000,\r\n    \"conta\": {\r\n        \"id\":1\r\n    },\r\n    \"cliente\": {\r\n        \"id\":1\r\n    }\r\n}",
+							"raw": "{\r\n    \"numero\": \"01010101\",\r\n    \"codSeguranca\": \"666\",\r\n    \"senha\": \"senha123\",\r\n    \"bandeira\": \"MasterCard\",\r\n    \"validade\": \"2030-08-30\",\r\n    \"limite\": 5000,\r\n    \"cliente\": {\r\n        \"id\":1\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -474,7 +566,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"numero\": \"1111111\",\r\n    \"codSeguranca\": \"010\",\r\n    \"senha\": \"senha321\",\r\n    \"bandeira\": \"Visa\",\r\n    \"validade\": \"2035-01-30\",\r\n    \"limite\": 10000,\r\n    \"conta\": {\r\n        \"id\":1\r\n    },\r\n    \"cliente\": {\r\n        \"id\":2\r\n    }\r\n}",
+							"raw": "{\r\n    \"numero\": \"1111111\",\r\n    \"codSeguranca\": \"010\",\r\n    \"senha\": \"senha321\",\r\n    \"bandeira\": \"Visa\",\r\n    \"validade\": \"2035-01-30\",\r\n    \"limite\": 10000,\r\n    \"cliente\": {\r\n        \"id\":2\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -523,6 +615,29 @@
 							"path": [
 								"cartaoDeCredito",
 								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-CARTAO-BY-EXAMPLE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/cartaoDeCredito?bandeira=mastercard",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"cartaoDeCredito"
+							],
+							"query": [
+								{
+									"key": "bandeira",
+									"value": "mastercard"
+								}
 							]
 						}
 					},

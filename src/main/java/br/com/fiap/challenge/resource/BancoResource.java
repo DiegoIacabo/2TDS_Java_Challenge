@@ -68,7 +68,7 @@ public class BancoResource implements ResourceDTO<Banco, BancoRequest, BancoResp
         var response = service.toResponse(saved);
 
         var uri = ServletUriComponentsBuilder
-                .fromCurrentRequest()
+                .fromCurrentRequestUri()
                 .path("/{id}")
                 .buildAndExpand(saved.getId())
                 .toUri();
