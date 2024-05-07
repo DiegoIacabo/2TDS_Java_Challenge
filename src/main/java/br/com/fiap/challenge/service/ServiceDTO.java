@@ -1,20 +1,18 @@
 package br.com.fiap.challenge.service;
 
+import org.springframework.data.domain.Example;
+
 import java.util.Collection;
 
-public interface ServiceDTO<Entity, Request, Response, AbstractRequest>{
+public interface ServiceDTO<Entity, Request, Response>{
 
-    Entity toEntity(Request request);
+    public Entity toEntity(Request request);
 
-    Response toResponse(Entity entity);
+    public Response toResponse(Entity entity);
 
-    Collection<Response> toResponse(Collection<Entity> entity);
+    public Collection<Entity> findAll(Example<Entity> example);
 
-    Collection<Entity> findAll();
+    public Entity findById(Long id);
 
-    Entity findById(Long id);
-
-    Entity findByAbstractRequest(AbstractRequest a);
-
-    Entity save(Entity entity);
+    public Entity save(Entity entity);
 }

@@ -9,12 +9,12 @@ public record CartaoDeCreditoResponse(
 
         Long id,
         String numero,
-        String codSegurnca,
+        String codSeguranca,
         String bandeira,
         Double limite,
         LocalDate validade,
         Double fatura,
-        ClienteResponse cliente,
-        ContaResponse conta
+        ClienteResponse cliente
+        //ContaResponse conta
 ) {
 }

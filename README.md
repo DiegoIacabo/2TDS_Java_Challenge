@@ -33,23 +33,23 @@
 
 ## Listagem de Endpoints
 - BancoResource:
-  - "localhost/banco" - GET
+  - "localhost/banco" - GET by example
   - "localhost/banco" - POST
   - "localhost/banco/{id}" - GET
 - AgenciaResource:
-  - "localhost/agencia" - GET
+  - "localhost/agencia" - GET by example
   - "localhost/agencia" - POST
   - "localhost/agencia/{id}" - GET
 - ClienteResource:
-  - "localhost/cliente" - GET
+  - "localhost/cliente" - GET by example
   - "localhost/cliente" - POST
   - "localhost/cliente/{id}" - GET
 - ContaResource:
-  - "localhost/conta" - GET
+  - "localhost/conta" - GET by example
   - "localhost/conta" - POST
   - "localhost/conta/{id}" - GET
   - "localhost/conta/{id}/clientes" - POST
 - CartaoDeCreditoResource:
-  - "localhost/cartaoDeCredito" - GET
+  - "localhost/cartaoDeCredito" - GET by example
   - "localhost/cartaoDeCredito" - POST
   - "localhost/cartaoDeCredito/{id}" - GET

@@ -6,12 +6,13 @@ import br.com.fiap.challenge.dto.response.BancoResponse;
 import br.com.fiap.challenge.entity.Banco;
 import br.com.fiap.challenge.repository.BancoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 
 @Service
-public class BancoService implements ServiceDTO<Banco, BancoRequest, BancoResponse, AbstractRequest> {
+public class BancoService implements ServiceDTO<Banco, BancoRequest, BancoResponse> {
 
     @Autowired
     private BancoRepository repo;
@@ -27,23 +28,13 @@ public class BancoService implements ServiceDTO<Banco, BancoRequest, BancoRespon
     }
 
     @Override
-    public Collection<BancoResponse> toResponse(Collection<Banco> entity) {
-        return entity.stream().map(this::toResponse).toList();
-    }
-
-    @Override
-    public Collection<Banco> findAll() {
-        return repo.findAll();
+    public Collection<Banco> findAll(Example<Banco> example) {
+        return repo.findAll(example);
     }
 
     @Override
     public Banco findById(Long id) {
         return repo.findById(id).orElse(null);
-    }
-
-    @Override
-    public Banco findByAbstractRequest(AbstractRequest a) {
-        return repo.findById(a.id()).orElse(null);
     }
 
     @Override

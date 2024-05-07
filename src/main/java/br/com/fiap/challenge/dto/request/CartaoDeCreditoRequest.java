@@ -26,8 +26,8 @@ public record CartaoDeCreditoRequest(
         @NotNull(message = "O limite do cartão deve ser informado.")
         Double limite,
 
-        @NotNull(message = "A conta do cartão deve ser informada.")
-        AbstractRequest conta,
+        //@NotNull(message = "A conta do cartão deve ser informada.")
+        //AbstractRequest conta,
 
         @NotNull(message = "O cliente do cartão deve ser informado.")
         AbstractRequest cliente

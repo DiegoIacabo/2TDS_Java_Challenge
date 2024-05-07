@@ -7,6 +7,7 @@ import br.com.fiap.challenge.entity.Cliente;
 import br.com.fiap.challenge.entity.Conta;
 import br.com.fiap.challenge.repository.ContaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -15,7 +16,7 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 @Service
-public class ContaService implements ServiceDTO<Conta, ContaRequest, ContaResponse, AbstractRequest> {
+public class ContaService implements ServiceDTO<Conta, ContaRequest, ContaResponse> {
 
     @Autowired
     private ContaRepository repo;
@@ -29,9 +30,9 @@ public class ContaService implements ServiceDTO<Conta, ContaRequest, ContaRespon
     @Override
     public Conta toEntity(ContaRequest contaRequest) {
 
-        var agencia = agenciaService.findByAbstractRequest(contaRequest.agencia());
+        var agencia = agenciaService.findById(contaRequest.agencia().id());
 
-        var clientes = clienteService.findByAbstractRequest(contaRequest.clientes());
+        var clientes = clienteService.findById(contaRequest.clientes().id());
 
         Set<Cliente> collection = new LinkedHashSet<>();
         collection.add(clientes);
@@ -52,7 +53,7 @@ public class ContaService implements ServiceDTO<Conta, ContaRequest, ContaRespon
 
         var agencia = agenciaService.toResponse(conta.getAgencia());
 
-        var clientes = clienteService.toResponse(conta.getClientes());
+        var clientes = conta.getClientes().stream().map(clienteService::toResponse).toList();
 
         return ContaResponse.builder()
                 .id(conta.getId())
@@ -66,23 +67,13 @@ public class ContaService implements ServiceDTO<Conta, ContaRequest, ContaRespon
     }
 
     @Override
-    public Collection<ContaResponse> toResponse(Collection<Conta> entity) {
-        return entity.stream().map(this::toResponse).toList();
-    }
-
-    @Override
-    public Collection<Conta> findAll() {
-        return repo.findAll();
+    public Collection<Conta> findAll(Example<Conta> example) {
+        return repo.findAll(example);
     }
 
     @Override
     public Conta findById(Long id) {
         return repo.findById(id).orElse(null);
-    }
-
-    @Override
-    public Conta findByAbstractRequest(AbstractRequest a) {
-        return repo.findById(a.id()).orElse(null);
     }
 
     @Override

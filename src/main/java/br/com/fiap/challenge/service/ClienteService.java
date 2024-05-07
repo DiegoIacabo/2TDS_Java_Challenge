@@ -6,12 +6,13 @@ import br.com.fiap.challenge.dto.response.ClienteResponse;
 import br.com.fiap.challenge.entity.Cliente;
 import br.com.fiap.challenge.repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 
 @Service
-public class ClienteService implements ServiceDTO<Cliente, ClienteRequest, ClienteResponse, AbstractRequest> {
+public class ClienteService implements ServiceDTO<Cliente, ClienteRequest, ClienteResponse> {
 
     @Autowired
     private ClienteRepository repo;
@@ -38,23 +39,13 @@ public class ClienteService implements ServiceDTO<Cliente, ClienteRequest, Clien
     }
 
     @Override
-    public Collection<ClienteResponse> toResponse(Collection<Cliente> entity) {
-        return entity.stream().map(this::toResponse).toList();
-    }
-
-    @Override
-    public Collection<Cliente> findAll() {
-        return repo.findAll();
+    public Collection<Cliente> findAll(Example<Cliente> example) {
+        return repo.findAll(example);
     }
 
     @Override
     public Cliente findById(Long id) {
         return repo.findById(id).orElse(null);
-    }
-
-    @Override
-    public Cliente findByAbstractRequest(AbstractRequest a) {
-        return repo.findById(a.id()).orElse(null);
     }
 
     @Override

@@ -63,14 +63,14 @@ public class CartaoDeCredito {
     )
     private Cliente cliente;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    @JoinColumn(
-            name = "CONTA",
-            referencedColumnName = "ID_CONTA",
-            foreignKey = @ForeignKey(
-                    name = "FK_CARTAO_CONTA"
-            ),
-            nullable = false
-    )
-    private Conta conta;
+    //@ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    //@JoinColumn(
+    //        name = "CONTA",
+    //        referencedColumnName = "ID_CONTA",
+    //        foreignKey = @ForeignKey(
+    //                name = "FK_CARTAO_CONTA"
+    //      ),
+    //        nullable = false
+    //)
+    //private Conta conta;
 }
