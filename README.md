@@ -23,10 +23,10 @@
 
 ## Diagramas
 ### Diagrama de Classes
-![diagrama_classes_challenge.png](documentacao%2Fimagens%2Fdiagrama_classes_challenge.png)
+![diagrama_classes_challenge_sprint2.png](documentacao%2Fimagens%2Fdiagrama_classes_challenge_sprint2.png)
 
 ### Diagrama de Entidade e Relacionamento
-![modelo_relacional_challenge.png](documentacao%2Fimagens%2Fmodelo_relacional_challenge.png)
+![modelo_relacional_challenge_sprint2.png](documentacao%2Fimagens%2Fmodelo_relacional_challenge_sprint2.png)
 
 ## Vídeo Pitch
 - Link: https://youtu.be/pt8mEREtx3k

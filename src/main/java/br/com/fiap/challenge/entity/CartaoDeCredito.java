@@ -19,8 +19,8 @@ import java.time.LocalDate;
                 columnNames = "NUM_CARTAO"
         ),
         @UniqueConstraint(
-                name = "UK_CONTA_CLIENTE_BANDEIRA",
-                columnNames = {"CONTA", "CLIENTE", "BANDEIRA"}
+                name = "UK_CLIENTE_BANDEIRA",
+                columnNames = {"CLIENTE", "BANDEIRA"}
         )
 })
 public class CartaoDeCredito {
