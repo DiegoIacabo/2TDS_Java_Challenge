@@ -46,7 +46,7 @@ public class AgenciaService implements ServiceDTO<Agencia, AgenciaRequest, Agenc
 
     @Override
     public Collection<Agencia> findAll(Example<Agencia> example) {
-        return null;
+        return repo.findAll(example);
     }
 
     @Override
