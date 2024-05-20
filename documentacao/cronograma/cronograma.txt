@@ -18,11 +18,13 @@
 
 15/04 -> Cada integrante finaliza suas respectivas atribuições para envio das entregas da Sprint 1
 
-07/05 -> Início do desenvolvimento das entregas da Sprint 2
+06/05 -> Início do desenvolvimento das entregas da Sprint 2
 
-12/05 -> Previsão de finalização das entregas de todos os intregantes e revisão do conteúdo destas
+07/05 -> Adiamento das entregas da Sprint 2
 
-13/05 -> Prazo final para envio das entregas da Sprint 2
+19/05 -> Previsão de finalização das entregas de todos os intregantes e revisão do conteúdo destas
+
+20/05 -> Prazo final para envio das entregas da Sprint 2
 
 
 
