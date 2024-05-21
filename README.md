@@ -4,7 +4,7 @@
 - Alejandro Rabelo RM93606 (Responsável pelo vídeo *pitch*)
 - Cristian Alvaro Condori Paucara RM550509 (Responsável pela criação dos protótipos de telas mobile)
 - Diego Seiti Ogita Iacabo RM551289 (Responsável pelo desenvolvimento do código Java e modelagem do Banco de Dados)
-- João Lucas Marques Costa RM98376 (Responsável por desenvolver a declaração de visão e escopo do projeto em formato *pitch*)
+- João Lucas Marques Costa RM98376 (Responsável por desenvolver a declaração de visão e escopo do projeto em formato *pitch* e arquitetura de solução)
 - Luiz Felipe Azevedo de Oliveira RM550348 (Responsável pelo escopo do projeto na ótica de DevOps e virtualização)
 
 ## Como Rodar a Aplicação
